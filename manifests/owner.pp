@@ -87,6 +87,7 @@ define dspace::owner ($username = $name,
           mode    => 0600,
           source  => $authorized_keys_source,
           require => File["/home/${username}/.ssh"],
+          replace => false,
         }
       }
 
